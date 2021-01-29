@@ -1,7 +1,8 @@
 # dermia_demo
 
+**DEMO** de software de detección y clasificación de patologías dermatológicas. 
 
-![alt text](https://github.com/ijourdan/dermia_demo/blob/main/samples/img01.png?raw=true { width: 200px; })
+Se emplea una *Deep Residual Learning Network* RESNET-50, [a link](https://arxiv.org/abs/1512.03385), con la tecnología de PyTorch
 
 <img src="samples/img01.png" alt="drawing" width="200"/>
 
