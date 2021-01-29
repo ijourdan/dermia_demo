@@ -9,7 +9,7 @@ La base de datos de entrenamiento se extrajo de *International Skin Imaging Coll
 
 <img src="samples/img01.png" alt="drawing" width="500"/> <img src="samples/img02.png" alt="drawing" width="500"/>
 
-El software es muy simple, se carga una imágen, mediante el botón 'Sel Img', se puede visualizar la imágen presionando `View Image, mostrando la imágen cargada, como en la figura de la izquierda.
+El software es muy simple, se carga una imágen, mediante el botón 'Sel Img', se puede visualizar la imágen presionando `View Image`, mostrando la imágen cargada, como en la figura de la izquierda.
 Presionando 'Procesar' la imágen entra a la NN y se muestran los resultados, ver la figura de derecha.
 
 Si se cargan varias imágenes, se registran en el 'box' de selección superior, y si la red obtiene más de un resultado, estos se encuentran en el 'box' inferior.
