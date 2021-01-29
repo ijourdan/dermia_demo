@@ -14,4 +14,8 @@ Presionando 'Procesar' la imágen entra a la NN y se muestran los resultados, ve
 
 Si se cargan varias imágenes, se registran en el 'box' de selección superior, y si la red obtiene más de un resultado, estos se encuentran en el 'box' inferior.
 
+De acuerdo con el corpus de ISIC, se detectan sólo dos categorías, **nevus** y **melanoma**. No hay mayores especificidades en el diagnóstico.
+
+El entrenamiento de la red **NO** es exaustivo, el protocolo se definió en 50 épocas, buscando que $F>1.2$ 
+
 
