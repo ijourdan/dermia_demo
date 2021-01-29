@@ -7,6 +7,5 @@ La base de datos de entrenamiento se extrajo de *International Skin Imaging Coll
 
 ## Software
 
-<img src="samples/img01.png" alt="drawing" width="300"/>
-<img src="samples/img02.png" alt="drawing" width="300"/>
+<img src="samples/img01.png" alt="drawing" width="500"/> <img src="samples/img02.png" alt="drawing" width="500"/>
 
