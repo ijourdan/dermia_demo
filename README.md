@@ -5,7 +5,7 @@
 El core es una *Deep Residual Learning Network* [RESNET-50](https://arxiv.org/abs/1512.03385) (NN), empleando [PyTorch](https://pytorch.org).
 La base de datos de entrenamiento se extrajo de *International Skin Imaging Collaboration* [ICIC](https://www.isic-archive.com).
 
-## Software
+## Software.
 
 <img src="samples/img01.png" alt="drawing" width="500"/> <img src="samples/img02.png" alt="drawing" width="500"/>
 
@@ -16,6 +16,12 @@ Si se cargan varias imágenes, se registran en el 'box' de selección superior, 
 
 De acuerdo con el corpus de ISIC, se detectan sólo dos categorías, **nevus** y **melanoma**. No hay mayores especificidades en el diagnóstico.
 
-El entrenamiento de la red **NO** es exaustivo, el protocolo se definió en 50 épocas, buscando que $F>1.2$ 
+El entrenamiento de la red **NO** es exaustivo, el protocolo se definió en 50 épocas, buscando que F>1.2, y una probabilida de detección correcta por arriba de 0.9.
+
+## Condiciones de desarrollo.
+
+-Python 3.8
+
+
 
 
