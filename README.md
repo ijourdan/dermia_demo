@@ -10,10 +10,10 @@ El corpus de entrenamiento se extrajo de *International Skin Imaging Collaborati
 <img src="samples/img01.png" alt="drawing" width="500"/> 
 <img src="samples/img02.png" alt="drawing" width="500"/>
 
-El Interfaz es muy simple, se carga una imágen, mediante el botón `Sel Img`, y se puede visualizar presionando `View Image`(ver figura superior).
-Presionando `Procesar` la imágen entra a la NN, y se detectan y clasifican tales detecciones. Los resultados se muestran al finalizar (ver la figura inferior)
+El Interfaz es muy simple, se carga una imagen, mediante el botón `Sel Img`, y se puede visualizar presionando `View Image`(ver figura superior).
+Presionando `Procesar` la imagen entra a la NN, y se detectan y clasifican tales detecciones. Los resultados se muestran al finalizar (ver la figura inferior)
 
-Para hacer un poco más dinámica la interfaz, se implementaton dos cajas de selección (`box`). Mediante `box` superior se pueden seleccionar las imágenes cargadas con `Sel Img`. `box` inferior permite seleccionar los resultados arrojados por la NN para la imagen seleccionada.
+Para hacer un poco más dinámica la interfaz, se implementaron dos cajas de selección (`box`). Mediante `box` superior se pueden seleccionar las imágenes cargadas con `Sel Img`. `box` inferior permite seleccionar los resultados arrojados por la NN para la imagen seleccionada.
 
 Se detectan sólo dos categorías, **nevus** y **melanoma**, no hay mayores especificidades en el diagnóstico. Esta limitante está dada por el corpus de ISIC. 
 
@@ -31,11 +31,11 @@ Se desarrolló empleando:
 
 Es importante tener en cuenta que, si se corre en OSX Catalina, tiene Python 3.9, y Pytorch no es estable con esa versión de Python. Y en particular, en este caso, no anda.
 
-El entrenamiento de la red **NO** es exaustivo, el protocolo se definió en 50 épocas, buscando que F>1.2, y una probabilida de detección correcta por arriba de 0.9.
+El entrenamiento de la red **NO** es exhaustivo, el protocolo se definió en 50 épocas, buscando que F>1.2, y una probabilidad de detección correcta por arriba de 0.8. Es buena detectando, no tanto clasificando.
 
 ## Corpus.
 Se bajaron 2400 imágenes de ICIC, lamentablemente, sólo el 6% de esas imágenes (144) corresponden a **melanomas**, y por lo tanto el corpus tiene un bias importante. Para entrenar la red, se generó un corpus de 288 elementos, compuesto por los **144 melanomas** y **144 nevus** elegidos en forma aleatoria. Por cada época de entrenamiento, se elegían nuevas imágenes correspondientes a nevus. Desde ya, esta estrategia genera un overfitting de los melanomas en relación a los nevus.
-Otra opción es no renovar los nevus en cada epoca, lo que reduce el corpus a 288 elementos. Para los fines prácticos del demostrador, es útil también.
+Otra opción es no renovar los nevus en cada época, lo que reduce el corpus a 288 elementos. Para los fines prácticos del demostrador, es útil también.
 
 ## Parámetros.
 En el repo no se encuentran los parámetros de la red, se deben descargar y mover al directorio `model/'.  
