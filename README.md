@@ -20,21 +20,25 @@ Se detectan sólo dos categorías, **nevus** y **melanoma**, no hay mayores espe
 
 
 ## Condiciones de testeo.
-Se desarrolló empleando:
+Se testeó empleando:
 
 - Python 3.8 (no emplear Python 3.9)
-- Torch 1.6.0
-- Torchvision 0.7.0
-- Matplotlib 3.3.2
-- PyQt5 5.15.1
-- numpy 1.19.2
+- [PyTorch 1.6.0](https://pypi.org/project/torch/1.6.0/)
+- [Torchvision 0.7.0](https://pypi.org/project/torchvision/0.7.0/)
+- [Matplotlib](https://pypi.org/project/matplotlib/)
+- [PyQt5](https://pypi.org/project/PyQt5/) 
+  - Es neciesario [OpenCV Headless](https://pypi.org/project/opencv-python-headless/)
+  - Imagino que [OpenCV](https://pypi.org/project/opencv-python/) también.
+- [Numpy](https://pypi.org/project/numpy/), es dependencia de PyTorch.
+
+Se entrenó y testeó en una computadora con **CUDA 11.0**.También se testeó en una computadora con sólo **CPU**, modelo un `Intel(R) Atom(TM) x5-z8350 CPU @ 1.44GHZ` con `2GB` de RAM. 
 
 Es importante tener en cuenta que, si se corre en OSX Catalina, tiene Python 3.9, y Pytorch no es estable con esa versión de Python. Y en particular, en este caso, no anda.
 
-El entrenamiento de la red **NO** es exhaustivo, el protocolo se definió en 50 épocas, buscando que F>1.2, y una probabilidad de detección correcta por arriba de 0.8. Es buena detectando, no tanto clasificando.
+El entrenamiento de la red **NO** fue exhaustivo, el protocolo se definió en 50 épocas, buscando que F>1.2, y una probabilidad de detección correcta por arriba de 0.8. Es buena detectando, no tanto clasificando.
 
 ## Corpus.
-Se bajaron 2400 imágenes de ICIC, lamentablemente, sólo el 6% de esas imágenes (144) corresponden a **melanomas**, y por lo tanto el corpus tiene un bias importante. Para entrenar la red, se generó un corpus de 288 elementos, compuesto por los **144 melanomas** y **144 nevus** elegidos en forma aleatoria. Por cada época de entrenamiento, se elegían nuevas imágenes correspondientes a nevus. Desde ya, esta estrategia genera un overfitting de los melanomas en relación a los nevus.
+Se bajaron 2400 imágenes de ICIC, lamentablemente, sólo el 6% de esas imágenes (144) corresponden a **melanomas**, y por lo tanto el corpus tiene un bias importante. Para entrenar la red, se generó un corpus de 288 elementos, compuesto por los **144 melanomas** y **144 nevus** elegidos en forma aleatoria. Por cada época de entrenamiento, se elegían nuevas imágenes correspondientes a nevus. Desde ya, esta estrategia genera un overfitting de los melanomas en relación con los nevus.
 Otra opción es no renovar los nevus en cada época, lo que reduce el corpus a 288 elementos. Para los fines prácticos del demostrador, es útil también.
 
 ## Parámetros.
