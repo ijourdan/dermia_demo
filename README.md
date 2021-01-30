@@ -33,7 +33,7 @@ Se testeó empleando:
 
 Se entrenó y testeó en una computadora con **CUDA 11.0**.También se testeó en una computadora con sólo **CPU**, modelo un `Intel(R) Atom(TM) x5-z8350 CPU @ 1.44GHZ` con `2GB` de RAM. 
 
-Es importante tener en cuenta que, si se corre en OSX Catalina, tiene Python 3.9, y Pytorch no es estable con esa versión de Python. Y en particular, en este caso, no anda.
+Es importante tener en cuenta que, si se corre en OSX Catalina, el SO tiene por defecto **Python 3.9**, y Pytorch no es estable con esa versión de Python. En este caso, en particular, **no anda**.
 
 El entrenamiento de la red **NO** fue exhaustivo, el protocolo se definió en 50 épocas, buscando que F>1.2, y una probabilidad de detección correcta por arriba de 0.8. Es buena detectando, no tanto clasificando.
 
