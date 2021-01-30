@@ -17,6 +17,9 @@ Para hacer un poco más dinámica la interfaz, se implementaron dos cajas de sel
 
 Se detectan sólo dos categorías, **nevus** y **melanoma**, no hay mayores especificidades en el diagnóstico. Esta limitante está dada por el corpus de ISIC. 
 
+Para ejecutarlo, en el directorio `dermia_demo/`:
+
+`% python3 dermia_demo.py`
 
 
 ## Condiciones de testeo.
