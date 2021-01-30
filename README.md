@@ -25,7 +25,7 @@ Para ejecutarlo, en el directorio `dermia_demo/`:
 ## Condiciones de testeo.
 Se testeó empleando:
 
-- Python 3.8 (no emplear Python 3.9)
+- Python 3.8 (se recomienda no emplear Python 3.9)
 - [PyTorch 1.6.0](https://pypi.org/project/torch/1.6.0/)
 - [Torchvision 0.7.0](https://pypi.org/project/torchvision/0.7.0/)
 - [Matplotlib](https://pypi.org/project/matplotlib/)
