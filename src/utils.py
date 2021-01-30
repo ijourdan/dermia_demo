@@ -41,14 +41,14 @@ class Imagen:
 class Dermia_Model:
 
     def __init__(self):
+        self.device = torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu')
         self.model_path = 'model/'
         self.model_parmeters_file = 'ISICModel_parameters.pt'
         self.num_classes = 4
         model_filename = join(self.model_path, self.model_parmeters_file)
         # load model
         self.model = self.get_instance_segmentation_model(self.num_classes)
-        self.model.load_state_dict(torch.load(model_filename))
-        self.device = torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu')
+        self.model.load_state_dict(torch.load(model_filename, map_location=self.device))     
         self.model.to(self.device)
         self.model.eval()
         self.score_threshold = 0.8
