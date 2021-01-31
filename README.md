@@ -10,7 +10,7 @@ El corpus de entrenamiento se extrajo de *International Skin Imaging Collaborati
 <img src="samples/img01.png" alt="drawing" width="500"/> 
 <img src="samples/img02.png" alt="drawing" width="500"/>
 
-El Interfaz es muy simple, se carga una imagen, mediante el botón `Sel Img`, y se puede visualizar presionando `View Image`(ver figura superior).
+La Interfaz es muy simple, se carga una imagen, mediante el botón `Sel Img`, y se puede visualizar presionando `View Image`(ver figura superior).
 Presionando `Procesar` la imagen entra a la NN, y se detectan y clasifican tales detecciones. Los resultados se muestran al finalizar (ver la figura inferior)
 
 Para hacer un poco más dinámica la interfaz, se implementaron dos cajas de selección (`box`). Mediante `box` superior se pueden seleccionar las imágenes cargadas con `Sel Img`. `box` inferior permite seleccionar los resultados arrojados por la NN para la imagen seleccionada.
