@@ -28,7 +28,7 @@ Se testeó empleando:
 - Python 3.8 (se recomienda no emplear Python 3.9)
 - [PyTorch 1.6.0](https://pypi.org/project/torch/1.6.0/)
 - [Torchvision 0.7.0](https://pypi.org/project/torchvision/0.7.0/)
-- [Matplotlib](https://pypi.org/project/matplotlib/)
+- [Matplotlib](https://pypi.org/project/matplotlib/): hay otras librerias más prolijas como [PyQtGraph](https://http://www.pyqtgraph.org/), tal vez en otra versión.
 - [PyQt5](https://pypi.org/project/PyQt5/) 
   - Es neciesario [OpenCV Headless](https://pypi.org/project/opencv-python-headless/)
   - Imagino que [OpenCV](https://pypi.org/project/opencv-python/) también.
