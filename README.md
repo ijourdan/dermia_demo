@@ -3,7 +3,7 @@
 **DEMO** de software de detección y clasificación de patologías dermatológicas. 
 
 El core es una *Deep Residual Learning Network* [RESNET-50](https://arxiv.org/abs/1512.03385) (NN), empleando [PyTorch](https://pytorch.org).
-El corpus de entrenamiento se extrajo de *International Skin Imaging Collaboration* [ICIC](https://www.isic-archive.com).
+El corpus de entrenamiento se extrajo de *International Skin Imaging Collaboration* [ISIC](https://www.isic-archive.com).
 
 ## Interfaz de Usuario.
 
